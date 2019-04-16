@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AaFels03</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Lingua project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/responsive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="super_container">
+      <%= render "layouts/header" %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
+    <%= javascript_include_tag("jquery-3.2.1.min.js") %>
+    <%= javascript_include_tag("popper.js") %>
+    <%= javascript_include_tag("bootstrap.min.js") %>
+    <%= javascript_include_tag("owl.carousel.js") %>
+    <%= javascript_include_tag("easing.js") %>
+    <%= javascript_include_tag("custom.js") %>
+  </body>
+</html>
