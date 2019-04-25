@@ -1,0 +1,42 @@
+<div class="home", style="width: 100%; height: 179px; background: #f1f1f1;">
+	<div class="breadcrumbs_container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<ul class="breadcrumbs_list d-flex flex-row align-items-center justify-content-start">
+						<li><a><%= link_to (t".h"), root_path %></a></li>
+						<li><a><%= t".e" %></a></li>
+						<li><a><%= t".new" %></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="courses">
+	<div class="container">
+		<div class="row courses_row">
+           <div class="col-lg-6 course_col">
+           	<h3><%= t".c" %></h3>
+            </br>
+            <%= simple_form_for(@category) do |f| %>
+
+              <%= f.input :name, label: "Category" %>
+
+              <div class="word">
+              <%= f.simple_fields_for :words do |builder| %>
+                <%= render 'word_fields', f: builder %>
+              <% end %>
+              </div>
+
+			  <div class="form-actions">
+              <%= link_to_add_association "Add Word", f, :words, class: 'btn btn-primary', data: { association_insertion_node: '.word', association_insertion_method: :append } %>
+              <%= f.submit "Create", class: "btn btn-primary" %>
+              </div>
+
+            <% end %>
+		   </div>
+		</div>
+	</div>
+</div>
