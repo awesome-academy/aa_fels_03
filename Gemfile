@@ -16,6 +16,7 @@ gem "figaro"
 gem "devise"
 gem "cancancan"
 gem "enum"
+gem "simple_form"
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Redis adapter to run Action Cable in production
