@@ -22,9 +22,13 @@
 
   <body>
     <div class="super_container">
-      <%= render "layouts/header" %>
-      <%= yield %>
-      <%= render "layouts/footer" %>
+      <% if user_signed_in? %>
+        <%= render "layouts/header" %>
+        <%= yield %>
+        <%= render "layouts/footer" %>
+      <% else %>
+        <%= yield %>
+      <% end %>
     </div>
     <%= javascript_include_tag("jquery-3.2.1.min.js") %>
     <%= javascript_include_tag("popper.js") %>

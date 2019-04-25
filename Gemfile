@@ -13,6 +13,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "mysql2"
 gem "figaro"
+gem "devise"
+gem "cancancan"
+gem "enum"
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Redis adapter to run Action Cable in production
