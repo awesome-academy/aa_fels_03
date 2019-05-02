@@ -52,13 +52,14 @@
 						</div>
 						<nav class="main_nav_contaner">
 							<ul class="main_nav">
-								<li class="active"><a><%= t".h" %></a></li>
-								<li><a><%= t".w" %></a></li>
+								<li><a><%= link_to (t".h"), root_path %></a></li>
+								<li><a><%= link_to (t".w"), words_path %></a></li>
+								<li><a><%= link_to (t".e"), categories_path %></a></li>
 							</ul>
 						</nav>
 						<div class="header_content_right ml-auto text-right">
 							<div class="header_search">
-								<div class="search_form_container">
+								<div class="search_form_container active">
 									<form action="#" id="search_form" class="search_form trans_400">
 										<input type="search" class="header_search_input trans_400" placeholder="Type for Search" required="required">
 										<div class="search_button">
@@ -98,8 +99,9 @@
 	</div>
 	<nav class="menu_nav">
 		<ul class="menu_mm">
-			<li class="menu_mm"><a><%= t".h" %></a></li>
-			<li class="menu_mm"><a><%= t".w" %></a></li>
+			<li class="menu_mm"><a><%= link_to (t".h"), root_path %></a></li>
+			<li class="menu_mm"><a><%= link_to (t".w"), words_path %></a></li>
+			<li class="menu_mm"><a><%= link_to (t".e"), categories_path %></a></li>
 		</ul>
 	</nav>
 	<div class="menu_extra">

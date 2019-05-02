@@ -33,6 +33,20 @@ en:
       v: "Vietnamese"
       z: "AAFELS"
       w: "Word List"
+      e: "Categories"
   homepages:
     index:
       a: "Learn Languages Easily"
+  categories:
+    new:
+      h: "Home"
+      new: "New"
+      c: "Create New"
+      e: "Categories"
+      word: "New Word"
+    index:
+      c: "Create New Categories"
+      h: "Home"
+      e: "Categories"
+
+
