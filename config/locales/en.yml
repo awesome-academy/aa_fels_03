@@ -37,6 +37,11 @@ en:
   homepages:
     index:
       a: "Learn Languages Easily"
+  words:
+    index:
+      h: "Home"
+      w: "Word List"
+      l: "List of Words"
   categories:
     new:
       h: "Home"
