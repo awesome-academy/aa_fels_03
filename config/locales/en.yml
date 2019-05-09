@@ -34,6 +34,8 @@ en:
       z: "AAFELS"
       w: "Word List"
       e: "Categories"
+      t: "Edit Profile"
+      o: "Sign Out"
   homepages:
     index:
       a: "Learn Languages Easily"
