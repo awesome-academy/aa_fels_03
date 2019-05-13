@@ -19,6 +19,7 @@ gem "enum"
 gem "simple_form"
 gem "cocoon"
 gem "rails_admin"
+gem "carrierwave"
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Use Redis adapter to run Action Cable in production

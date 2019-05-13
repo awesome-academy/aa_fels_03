@@ -1,4 +1,4 @@
-admin = User.create! email: "admin@gmail.com", password: "admin123", role: "admin"
+admin = User.create! email: "admin@gmail.com", password: "admin123", role: "admin", remote_avatar_url: 'https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601705169.jpg'
 
 category1 = Category.create! name: "Fashion"
 
