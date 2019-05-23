@@ -67,3 +67,18 @@ en:
     show:
       h: "Home"
       u: "All Users"
+  lessons:
+    index:
+      h: "Home"
+      l: "Lessons"
+      c: Created At
+      i: "Title"
+      d: "Duration"
+      q: "Question"
+      t: "Spent Time"
+      r: "Result"
+      s: "Status"
+      test_time: "20:00"
+      strftime: "%H:%M, %d %B %Y"
+      test: "Test"
+      completed: "Completed"
