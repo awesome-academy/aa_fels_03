@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+  get "auth/facebook", as: "auth_provider"
+  get "auth/facebook/callback", to: "user#login"
 end
