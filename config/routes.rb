@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'words/index'
-  get 'words/show'
+  get "notifications/index"
+  mount ActionCable.server => '/cable'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root "homepages#index"
