@@ -1,0 +1,6 @@
+<% @categories.sort_by(&:name).each do |category| %>
+  <h4><%= category.name %></h4><hr>
+  <% category.words.sort_by(&:content).each do |word| %>
+  <p><%= word.content %></p>
+  <% end %>
+<% end %>

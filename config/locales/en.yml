@@ -33,9 +33,9 @@ en:
       v: "Vietnamese"
       z: "AAFELS"
       w: "Word List"
-      e: "Categories"
       t: "Edit Profile"
       o: "Sign Out"
+      c: "Categories"
   homepages:
     index:
       a: "Learn Languages Easily"
@@ -43,7 +43,11 @@ en:
     index:
       h: "Home"
       w: "Word List"
+      d: "....."
+      al: "Alphabet"
+      c: "Categories"
       l: "List of Words"
+      f: "filter_form"
   categories:
     new:
       h: "Home"

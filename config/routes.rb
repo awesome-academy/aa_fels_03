@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'words/index'
-  get 'words/show'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root "homepages#index"
   get "homepages/index"
-  post "/words/new", to: "words#create"
+  post "/words", to: "words#index"
   post "/categories/new", to: "categories#create"
   # post "/trainee_tests", to: "trainee_tests#create"
 
