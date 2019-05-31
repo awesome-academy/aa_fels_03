@@ -35,7 +35,8 @@ en:
       w: "Word List"
       t: "Edit Profile"
       o: "Sign Out"
-      c: "Categories"
+      a: "Categories"
+      u: "Users"
   homepages:
     index:
       a: "Learn Languages Easily"
@@ -59,5 +60,10 @@ en:
       c: "Create New Categories"
       h: "Home"
       e: "Categories"
-
-
+  users:
+    index:
+      h: "Home"
+      u: "All Users"
+    show:
+      h: "Home"
+      u: "All Users"

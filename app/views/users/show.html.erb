@@ -1,0 +1,30 @@
+<div class="home", style="width: 100%; height: 179px; background: #f1f1f1;">
+  <div class="breadcrumbs_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="breadcrumbs_list d-flex flex-row align-items-center justify-content-start">
+            <li><a><%= link_to (t".h"), root_path %></a></li>
+            <li><a><%= link_to (t".u"), users_path %></a></li>
+            <li><a><%= @user.name %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="courses">
+  <div class="container">
+    <div class="row courses_row">
+      <div class="col-lg-4 instructor_col">
+        <div class="instructor text-center">
+          <div class="instructor_image_container">
+            <div class="instructor_image"><%= image_tag(@user.avatar.url) %></div>
+          </div>
+          <div class="instructor_name"><%= @user.name %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
