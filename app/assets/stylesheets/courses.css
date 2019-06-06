@@ -1557,3 +1557,62 @@ section
 {
 	color: rgba(255,255,255,1);
 }
+
+8. Teachers
+*********************************/
+
+.teachers
+{
+	width: 100%;
+	background: #f8f8f8;
+	padding-top: 129px;
+	padding-bottom: 120px;
+}
+.teachers_row
+{
+	margin-top: 64px;
+}
+.teacher
+{
+	width: 100%;
+	margin-bottom: 30px;
+	background: #FFFFFF;
+	padding-left: 50px;
+	padding-right: 30px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.teacher_image div
+{
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.teacher_image div img
+{
+	max-width: 100%;
+}
+.teacher_content
+{
+	padding-left: 30px;
+}
+.teacher_name a
+{
+	font-size: 16px;
+	font-weight: 700;
+	color: rgba(0,0,0,0.8);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.teacher_name a:hover
+{
+	color: #2e21df;
+}
+.teacher_title
+{
+	margin-top: 1px;
+}

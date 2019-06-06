@@ -22,7 +22,11 @@
           <div class="instructor_image_container">
             <div class="instructor_image"><%= image_tag(@user.avatar.url) %></div>
           </div>
-          <div class="instructor_name"><%= @user.name %></div>
+          <div class="instructor_name">
+            <%= @user.name %></br></br>
+            <%= render "stats" %></br></br>
+            <%= render "follow_button" if user_signed_in? %>
+          </div>
         </div>
       </div>
     </div>

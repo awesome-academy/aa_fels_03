@@ -1,0 +1,57 @@
+<div class="home", style="width: 100%; height: 179px; background: #f1f1f1;">
+  <div class="breadcrumbs_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="breadcrumbs_list d-flex flex-row align-items-center justify-content-start">
+            <li><a><%= link_to (t".h"), root_path %></a></li>
+            <li><a><%= link_to (t".u"), users_path %></a></li>
+            <li><a><%= link_to current_user.name, user_path(current_user) %></a></li>
+            <li><a><%= @title %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="courses">
+  <div class="container">
+    <div class="row courses_row">
+      <div class="col-lg-12">
+        <div class="col-lg-4 instructor_col">
+          <div class="instructor text-center">
+            <div class="instructor_image_container">
+              <div class="instructor_image"><%= image_tag(current_user.avatar.url) %></div>
+            </div>
+            <div class="instructor_name"><%= current_user.name %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="teachers">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="section_title text-center"><%= @title %></h2>
+      </div>
+    </div>
+
+  <div class="row teachers_row">
+    <% @users.each do |user| %>
+    <div class="col-lg-4 col-md-6">
+      <div class="teacher d-flex flex-row align-items-center justify-content-start">
+        <div class="teacher_content">
+          <div class="teacher_name"><a><%= link_to user.name, user_path(user) %></a></div>
+        </div>
+        <div class="teacher_image"><div><%= image_tag(user.avatar.url) %></div></div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  
+  </div>
+</div>

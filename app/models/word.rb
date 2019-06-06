@@ -9,13 +9,13 @@ class Word < ApplicationRecord
     # Select All Lesson Words of match_lessons
     lesson_words = LessonWord.words_of_lesson(match_lessons_ids)
     # Find All Answers of Lesson Words
-    @word_answers = WordAnswer.joins(:lesson_words)
+    word_answers = WordAnswer.joins(:lesson_words)
     # Select the answers have status = correct
-    correct_answers_ids = "SELECT word_id FROM #{@word_answers}
-                           WHERE status = Correct"
-
+    # correct_answers = word_answers.where(status: "Correct")
+    # correct_answers_ids = correct_answers.pluck :id
+    # correct_answers_ids = "SELECT word_id FROM #{@word_answers} WHERE status = Correct"
+    correct_answers_ids = word_answers.where(id: word_answers.where(status: "Correct")).pluck :id
     skip_word_ids = Word.where("word_id IN (#{correct_answers_ids})")
-
     Word.where("word_id NOT IN (#{skip_word_ids})")
   end
 end
