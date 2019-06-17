@@ -88,7 +88,6 @@ GEM
       responders
       warden (~> 1.2.3)
     duktape (2.0.1.0)
-    enum (1.0.0)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.10.0-x64-mingw32)
@@ -268,7 +267,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   duktape
-  enum
   figaro
   jbuilder (~> 2.5)
   mysql2
