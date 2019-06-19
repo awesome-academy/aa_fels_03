@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root "homepages#index"
   get "homepages/index"
   post "/categories/new", to: "categories#create"
-  # post "/trainee_tests", to: "trainee_tests#create"
 
   resources :words
   resources :categories

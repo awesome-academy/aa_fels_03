@@ -1,4 +1,12 @@
 class LessonsController < ApplicationController
+  
+  def show
+    @lesson = Lesson.find params[:id]
+    lesson_category = @lesson.category
+    lessons_of_user = current_user.lessons
+    match_lessons = lessons_of_user.lesson_cate(lesson_category.id)
+    @lesson_words = Word.words_of_category(lesson_category.id).create_lesson_words(match_lessons.ids)
+  end
 
   def index
     @lessons = current_user.lessons
@@ -6,13 +14,8 @@ class LessonsController < ApplicationController
   end
 
   def create
-    lesson_category = Category.find(params[:lesson][:category_id])
-    lessons_of_user = current_user.lessons
-    match_lessons = lessons_of_user.lesson_cate(lesson_category.id)
-    @lesson_words = Word.create_lesson_words(match_lessons.ids)
     lesson = current_user.lessons.build(lesson_params)
-    lesson.save
-    redirect_to lessons_path
+    redirect_to lessons_path if lesson.save
   end
 
   private
