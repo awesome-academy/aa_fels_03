@@ -67,6 +67,9 @@ en:
     show:
       h: "Home"
       u: "All Users"
+    show_follow:
+      h: "Home"
+      u: "All Users"
   lessons:
     index:
       h: "Home"
