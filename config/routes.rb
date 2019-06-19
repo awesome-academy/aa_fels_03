@@ -4,12 +4,15 @@ Rails.application.routes.draw do
   root "homepages#index"
   get "homepages/index"
   post "/categories/new", to: "categories#create"
-  # post "/trainee_tests", to: "trainee_tests#create"
 
   resources :relationships, only: [:create, :destroy]
   resources :words
   resources :categories
-  resources :lessons
+  resources :lessons do
+    member do
+      get :completed
+    end
+  end
   resources :users do
     member do
       get :following, :followers

@@ -4,18 +4,16 @@ class Word < ApplicationRecord
   has_many :learned_words
   has_many :word_answers
   accepts_nested_attributes_for :word_answers, allow_destroy: true, reject_if: proc { |att| att['description'].blank? }
+  scope :words_of_category, -> (category_ids){ where category_id: category_ids }
 
-  def self.create_lesson_words(match_lessons_ids)
+  def self.unlearned_words(lessons_ids)
     # Select All Lesson Words of match_lessons
-    lesson_words = LessonWord.words_of_lesson(match_lessons_ids)
+    lesson_words = LessonWord.words_of_lesson(lessons_ids)
     # Find All Answers of Lesson Words
-    word_answers = WordAnswer.joins(:lesson_words)
-    # Select the answers have status = correct
-    # correct_answers = word_answers.where(status: "Correct")
-    # correct_answers_ids = correct_answers.pluck :id
-    # correct_answers_ids = "SELECT word_id FROM #{@word_answers} WHERE status = Correct"
-    correct_answers_ids = word_answers.where(id: word_answers.where(status: "Correct")).pluck :id
-    skip_word_ids = Word.where("word_id IN (#{correct_answers_ids})")
-    Word.where("word_id NOT IN (#{skip_word_ids})")
+    word_answers = WordAnswer.where(id: lesson_words.pluck(:word_answer_id))
+    # Select learned words were the answers had status = correct
+    @learned_words = Word.where(id: word_answers.where(status: "Correct").pluck(:word_id))
+    # Create Unlearned Words are Words without learned words
+    Word.where.not(id: @learned_words.pluck(:id))
   end
 end

@@ -48,14 +48,14 @@
                   <td><%= lesson.created_at.strftime(t".strftime") %></td>
                   <td><%= lesson.category.name %></td>
                   <td><%= t".test_time" %></td>
-                  <td><%= lesson.lesson_words.count %></td>
+                  <td><%= t".20" %></td>
                   <td></td>
                   <td><%= lesson.mark %></td>
                   <td>
                     <% if lesson.mark.blank? %>
-                      <!--- Button Redirect To Do The Test ( The First Show ) !--->
-                    <% elsif lesson.score.present? %>
-                      <!--- Button Redirect To View The Test ( The Second Show ) !--->
+                      <%= link_to (t".test"), lesson_path(lesson), class: "btn-primary btn-lg" %>
+                    <% elsif lesson.mark.present? %>
+                      <%= link_to (t".completed"), completed_lesson_path(lesson), class: "btn-success btn-lg" %>
                     <%end%>
                   </td>
                 </tr>
