@@ -1,0 +1,3 @@
+development:
+  app_id: <%= Figaro.env.fb_app_id %>
+  secret: <%= Figaro.env.fb_secret_key %>
