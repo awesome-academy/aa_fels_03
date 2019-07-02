@@ -24,6 +24,7 @@ en:
       a16: "Brand Guidelines"
       a17: "Privacy"
     header:
+      l: "Lessons"
       b: "phone:"
       c: "+44 300 303 0266"
       d: "site language:"
@@ -85,3 +86,10 @@ en:
       strftime: "%H:%M, %d %B %Y"
       test: "Test"
       completed: "Completed"
+    show:
+      l: "Lessons"
+      h: "Home"
+      d: "Done"
+    completed:
+      l: "Lessons"
+      h: "Home"
