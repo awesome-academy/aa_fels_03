@@ -1,0 +1,9 @@
+<h4><%= t".lr" %></h4>
+<% @learned_words.sort_by(&:content).each do |word|%>
+  <p><%= word.content %></p>
+<% end %>
+
+<h4><%= t".ul" %></h4>
+<% @unlearned_words.sort_by(&:content).each do |word|%>
+  <p><%= word.content %></p>
+<% end %>

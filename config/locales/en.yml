@@ -49,6 +49,8 @@ en:
       c: "Categories"
       l: "List of Words"
       f: "filter_form"
+      lr: "Learned Words"
+      ul: "Unlearned Words"
   categories:
     new:
       h: "Home"

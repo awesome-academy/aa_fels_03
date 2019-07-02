@@ -20,12 +20,14 @@
               <h3><%= t".l" %></h3></br>
 
               <%= form_with url: words_path, method: :get, include_blank: true do %>
-                <%= select_tag (t".f"), options_for_select([[(t".d")], [(t".al")], [(t".c")]]),
+                <%= select_tag (t".f"), options_for_select([[(t".d")], [(t".al")], [(t".lr")], [(t".c")]]),
                 onchange: "this.form.submit()" %>
               <% end %>
 
               <% if params[:filter_form] == (t".c") %>
                 <%= render "words/filter_by_categories" %>
+              <% elsif params[:filter_form] == (t".lr") %>
+                <%= render "words/filter_by_learned_words" %>
               <% else %>
                 <%= render "words/filter_by_alphabet" %>
               <% end %>
